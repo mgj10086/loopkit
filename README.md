@@ -25,6 +25,10 @@ Docker did for containers, LoopKit gives you:
 
 ## Demo
 
+![LoopKit Demo](docs/demo.svg)
+
+Try it yourself:
+
 ```bash
 # Install Python runtime
 cd runtime && pip install -e .

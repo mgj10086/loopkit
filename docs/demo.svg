@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+      text { font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', 'Consolas', monospace; }
+      .prompt { fill: #7aa2f7; }
+      .success { fill: #9ece6a; }
+      .warning { fill: #e0af68; }
+      .error { fill: #f7768e; }
+      .info { fill: #7dcfff; }
+      .dim { fill: #565f89; }
+      .header { fill: #bb9af7; }
+      .cursor { animation: blink 1.2s step-end infinite; }
+      .highlight { fill: #ff9e64; }
+      @keyframes blink { 50% { opacity: 0; } }
+      @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+      .line { animation: fadeIn 0.3s ease-out forwards; opacity: 0; }
+      .line:nth-child(1) { animation-delay: 0.0s; }
+      .line:nth-child(2) { animation-delay: 0.15s; }
+      .line:nth-child(3) { animation-delay: 0.3s; }
+      .line:nth-child(4) { animation-delay: 0.45s; }
+      .line:nth-child(5) { animation-delay: 0.6s; }
+      .line:nth-child(6) { animation-delay: 0.75s; }
+      .line:nth-child(7) { animation-delay: 0.9s; }
+      .line:nth-child(8) { animation-delay: 1.05s; }
+      .line:nth-child(9) { animation-delay: 1.2s; }
+      .line:nth-child(10) { animation-delay: 1.35s; }
+      .line:nth-child(11) { animation-delay: 1.5s; }
+      .line:nth-child(12) { animation-delay: 1.65s; }
+      .line:nth-child(13) { animation-delay: 1.8s; }
+      .line:nth-child(14) { animation-delay: 1.95s; }
+      .line:nth-child(15) { animation-delay: 2.1s; }
+      .line:nth-child(16) { animation-delay: 2.25s; }
+      .line:nth-child(17) { animation-delay: 2.4s; }
+      .line:nth-child(18) { animation-delay: 2.55s; }
+      .line:nth-child(19) { animation-delay: 2.7s; }
+      .line:nth-child(20) { animation-delay: 2.85s; }
+      .line:nth-child(21) { animation-delay: 3.0s; }
+      .line:nth-child(22) { animation-delay: 3.15s; }
+      .line:nth-child(23) { animation-delay: 3.3s; }
+      .line:nth-child(24) { animation-delay: 3.45s; }
+      .line:nth-child(25) { animation-delay: 3.6s; }
+      .glow { filter: drop-shadow(0 0 6px rgba(158, 206, 106, 0.3)); }
+    </style>
+    <!-- Terminal window shadow -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Glow filter -->
+    <filter id="green-glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#9ece6a" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Subtle page background -->
+  <rect width="800" height="540" fill="#13141c"/>
+
+  <!-- Terminal window -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="20" width="740" height="500" rx="10" fill="#1a1b26"/>
+    <rect x="30" y="20" width="740" height="38" rx="10" fill="#16161e"/>
+    <rect x="30" y="48" width="740" height="10" fill="#16161e"/>
+
+    <!-- Window buttons -->
+    <circle cx="52" cy="39" r="6" fill="#f7768e"/>
+    <circle cx="72" cy="39" r="6" fill="#e0af68"/>
+    <circle cx="92" cy="39" r="6" fill="#9ece6a"/>
+
+    <!-- Title -->
+    <text x="400" y="44" fill="#565f89" font-size="12" font-weight="500" text-anchor="middle">loopkit-demo — loopkit-runtime --dry-run demo</text>
+
+    <!-- Terminal content -->
+    <g transform="translate(45, 75)">
+      <!-- Line 1: prompt -->
+      <g class="line">
+        <text x="0" y="0" font-size="13" class="prompt" font-weight="600">$</text>
+        <text x="16" y="0" font-size="13" fill="#a9b1d6">loopkit-runtime --dry-run demo</text>
+      </g>
+
+      <!-- Line 2: header -->
+      <g class="line" transform="translate(0, 24)">
+        <text x="0" y="0" font-size="12" fill="#565f89">=================================================</text>
+      </g>
+
+      <!-- Line 3: title -->
+      <g class="line" transform="translate(0, 44)">
+        <text x="140" y="0" font-size="14" font-weight="700" class="header">LoopKit Demo — Built-in Loops</text>
+      </g>
+
+      <!-- Line 4: closing equals -->
+      <g class="line" transform="translate(0, 64)">
+        <text x="0" y="0" font-size="12" fill="#565f89">=================================================</text>
+      </g>
+
+      <!-- Line 5: empty -->
+      <!-- Line 6: Demo: pr-review -->
+      <g class="line" transform="translate(0, 88)">
+        <text x="0" y="0" font-size="13" font-weight="600" fill="#7dcfff">── Demo: pr-review</text>
+        <text x="195" y="0" font-size="13" fill="#565f89">──────────────────────────────────────────────</text>
+      </g>
+
+      <!-- Line 7 -->
+      <g class="line" transform="translate(0, 112)">
+        <text x="16" y="0" font-size="12" class="info">Description:</text>
+        <text x="120" y="0" font-size="12" fill="#a9b1d6">Multi-agent code review with Maker/Checker</text>
+      </g>
+
+      <!-- Line 8 -->
+      <g class="line" transform="translate(0, 132)">
+        <text x="16" y="0" font-size="12" class="info">Mode:</text>
+        <text x="120" y="0" font-size="12" fill="#e0af68">dry run</text>
+      </g>
+
+      <!-- Line 9: empty -->
+
+      <!-- Line 10: Running Loop -->
+      <g class="line" transform="translate(0, 160)">
+        <text x="0" y="0" font-size="13" font-weight="600" fill="#bb9af7">Running Loop: pr-review</text>
+      </g>
+
+      <!-- Line 11: sub info -->
+      <g class="line" transform="translate(0, 180)">
+        <text x="16" y="0" font-size="12" class="dim">Config:</text>
+        <text x="75" y="0" font-size="12" fill="#a9b1d6">loops/pr-review.yaml</text>
+      </g>
+
+      <!-- Line 12 -->
+      <g class="line" transform="translate(0, 200)">
+        <text x="16" y="0" font-size="12" class="dim">Pipeline:</text>
+        <text x="90" y="0" font-size="12" fill="#a9b1d6">1 step(s)</text>
+      </g>
+
+      <!-- Line 13 -->
+      <g class="line" transform="translate(0, 220)">
+        <text x="16" y="0" font-size="12" class="dim">Verification:</text>
+        <text x="120" y="0" font-size="12" fill="#a9b1d6">Maker=[4 agents] | Checker=Adversarial Verifier</text>
+      </g>
+
+      <!-- Line 14: Pipeline Execution header -->
+      <g class="line" transform="translate(0, 252)">
+        <text x="0" y="0" font-size="13" font-weight="600" fill="#7dcfff">── Pipeline Execution</text>
+        <text x="195" y="0" font-size="13" fill="#565f89">───────────────────────────────────────────</text>
+      </g>
+
+      <!-- Lines 15-18: Agents -->
+      <g class="line" transform="translate(0, 276)">
+        <text x="16" y="0" font-size="12" class="dim">4 agents running in parallel...</text>
+      </g>
+
+      <g class="line" transform="translate(0, 296)">
+        <text x="20" y="0" font-size="12" class="dim">→</text>
+        <text x="32" y="0" font-size="12" fill="#a9b1d6">Agent: Bug Review...</text>
+        <text x="238" y="0" font-size="12" fill="#9ece6a" filter="url(#green-glow)">✓ Completed (12ms, $0.0000)</text>
+      </g>
+
+      <g class="line" transform="translate(0, 314)">
+        <text x="20" y="0" font-size="12" class="dim">→</text>
+        <text x="32" y="0" font-size="12" fill="#a9b1d6">Agent: Security Review...</text>
+        <text x="248" y="0" font-size="12" fill="#9ece6a" filter="url(#green-glow)">✓ Completed (8ms, $0.0000)</text>
+      </g>
+
+      <g class="line" transform="translate(0, 332)">
+        <text x="20" y="0" font-size="12" class="dim">→</text>
+        <text x="32" y="0" font-size="12" fill="#a9b1d6">Agent: Quality Review...</text>
+        <text x="238" y="0" font-size="12" fill="#9ece6a" filter="url(#green-glow)">✓ Completed (15ms, $0.0000)</text>
+      </g>
+
+      <g class="line" transform="translate(0, 350)">
+        <text x="20" y="0" font-size="12" class="dim">→</text>
+        <text x="32" y="0" font-size="12" fill="#a9b1d6">Agent: Performance Review...</text>
+        <text x="254" y="0" font-size="12" fill="#9ece6a" filter="url(#green-glow)">✓ Completed (10ms, $0.0000)</text>
+      </g>
+
+      <!-- Line 19: Verification header -->
+      <g class="line" transform="translate(0, 382)">
+        <text x="0" y="0" font-size="13" font-weight="600" fill="#7dcfff">── Maker/Checker Verification</text>
+        <text x="240" y="0" font-size="13" fill="#565f89">─────────────────────────────</text>
+      </g>
+
+      <!-- Line 20 -->
+      <g class="line" transform="translate(0, 406)">
+        <text x="16" y="0" font-size="12" class="dim">Round 1:</text>
+        <text x="90" y="0" font-size="12" fill="#9ece6a" font-weight="600">PASS</text>
+        <text x="140" y="0" font-size="12" fill="#565f89">(score: 0.95)</text>
+      </g>
+
+      <!-- Line 21: Results header -->
+      <g class="line" transform="translate(0, 438)">
+        <text x="0" y="0" font-size="13" font-weight="600" fill="#7dcfff">── Results</text>
+        <text x="105" y="0" font-size="13" fill="#565f89">────────────────────────────────────────────────</text>
+      </g>
+
+      <!-- Line 22 -->
+      <g class="line" transform="translate(0, 462)">
+        <text x="16" y="0" font-size="12" fill="#9ece6a">✓</text>
+        <text x="32" y="0" font-size="12" fill="#a9b1d6">Loop 'pr-review' completed successfully</text>
+      </g>
+
+      <!-- Line 23: metrics -->
+      <g class="line" transform="translate(0, 482)">
+        <text x="20" y="0" font-size="12" class="dim">Duration: 424ms</text>
+        <text x="195" y="0" font-size="12" class="dim">Steps: 4</text>
+        <text x="340" y="0" font-size="12" class="dim">Cost: $0.0000</text>
+      </g>
+
+      <!-- Line 24: cursor blink -->
+      <g class="line" transform="translate(0, 510)">
+        <text x="0" y="0" font-size="13" class="prompt">$</text>
+        <text x="16" y="0" font-size="13" class="dim">—</text>
+        <rect x="24" y="-10" width="8" height="16" rx="1" fill="#7aa2f7" class="cursor"/>
+      </g>
+    </g>
+  </g>
+</svg>

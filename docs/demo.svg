@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 540">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
       text { font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', 'Consolas', monospace; }
       .c1 { fill: #7aa2f7; }  .c2 { fill: #a9b1d6; }
       .c3 { fill: #565f89; }  .c4 { fill: #bb9af7; font-weight: 700; }
@@ -33,48 +32,27 @@
     <text x="410" y="44" fill="#3b4261" font-size="12" font-weight="500" text-anchor="middle">loopkit-demo</text>
   </g>
 
-  <!-- All lines positioned with x,y directly on text, each line as its own <g class="ln"> -->
   <g font-size="12">
-    <!-- L1: $ loopkit-runtime --dry-run demo -->
     <g class="ln"><text x="50" y="88" class="c1" font-weight="600" font-size="13">$</text><text x="66" y="88" class="c2" font-size="13">loopkit-runtime --dry-run demo</text></g>
-    <!-- L2: ===== -->
     <g class="ln"><text x="50" y="110" class="c3">============================================================</text></g>
-    <!-- L3: LoopKit Demo -->
     <g class="ln"><text x="180" y="132" class="c4" font-size="14">LoopKit Demo — Built-in Loops</text></g>
-    <!-- L4: ===== -->
     <g class="ln"><text x="50" y="152" class="c3">============================================================</text></g>
-    <!-- L5: blank -->
-    <!-- L6: ── Demo: pr-review -->
     <g class="ln"><text x="50" y="178" class="c5" font-size="13">── Demo: pr-review</text><text x="230" y="178" class="c3" font-size="13">────────────────────────────────────────</text></g>
-    <!-- L7: Description -->
     <g class="ln"><text x="70" y="202" class="c5">Description:</text><text x="170" y="202" class="c2">Multi-agent code review with Maker/Checker</text></g>
-    <!-- L8: Mode -->
     <g class="ln"><text x="70" y="222" class="c5">Mode:</text><text x="122" y="222" class="c6">dry run</text></g>
-    <!-- L9: blank -->
-    <!-- L10: Running Loop -->
     <g class="ln"><text x="50" y="254" class="c4" font-size="13">Running Loop: pr-review</text></g>
-    <!-- L11: Config -->
     <g class="ln"><text x="70" y="276" class="c3">Config:</text><text x="130" y="276" class="c2">loops/pr-review.yaml</text></g>
-    <!-- L12: Pipeline -->
     <g class="ln"><text x="70" y="294" class="c3">Pipeline:</text><text x="148" y="294" class="c2">1 step(s)</text></g>
-    <!-- L13: Verification -->
     <g class="ln"><text x="70" y="312" class="c3">Verification:</text><text x="180" y="312" class="c2">Maker=[4 agents] | Checker=Adversarial Verifier</text></g>
-    <!-- L14: ── Pipeline Execution -->
     <g class="ln"><text x="50" y="344" class="c5" font-size="13">── Pipeline Execution</text><text x="235" y="344" class="c3" font-size="13">───────────────────────────────────</text></g>
-    <!-- L15: 4 agents running... -->
     <g class="ln"><text x="70" y="366" class="c3">4 agents running in parallel...</text></g>
-    <!-- L16-19: Agents -->
     <g class="ln"><text x="74" y="386" class="c3">→</text><text x="88" y="386" class="c2">Agent: Bug Review...</text><text x="285" y="386" class="c7" filter="url(#glow)">✓ Completed (12ms, $0.0000)</text></g>
     <g class="ln"><text x="74" y="404" class="c3">→</text><text x="88" y="404" class="c2">Agent: Security Review...</text><text x="295" y="404" class="c7" filter="url(#glow)">✓ Completed (8ms, $0.0000)</text></g>
     <g class="ln"><text x="74" y="422" class="c3">→</text><text x="88" y="422" class="c2">Agent: Quality Review...</text><text x="285" y="422" class="c7" filter="url(#glow)">✓ Completed (15ms, $0.0000)</text></g>
     <g class="ln"><text x="74" y="440" class="c3">→</text><text x="88" y="440" class="c2">Agent: Performance Review...</text><text x="300" y="440" class="c7" filter="url(#glow)">✓ Completed (10ms, $0.0000)</text></g>
-    <!-- L20: ── Maker/Checker -->
     <g class="ln"><text x="50" y="470" class="c5" font-size="13">── Maker/Checker Verification</text><text x="270" y="470" class="c3" font-size="13">──────────────────────</text></g>
-    <!-- L21: Round 1 PASS -->
     <g class="ln"><text x="70" y="492" class="c3">Round 1:</text><text x="145" y="492" class="c7" font-weight="600">PASS</text><text x="198" y="492" class="c3">(score: 0.95)</text></g>
-    <!-- L22: ── Results -->
     <g class="ln"><text x="50" y="514" class="c5" font-size="13">── Results</text><text x="150" y="514" class="c3" font-size="13">────────────────────────────────────</text></g>
-    <!-- L23: Success -->
     <g class="ln"><text x="70" y="528" class="c7">✓</text><text x="88" y="528" class="c2">Loop 'pr-review' completed successfully</text></g>
   </g>
 </svg>

@@ -5,6 +5,9 @@
   "keywords": ["loop-engineering", "agent", "ai-agent", "automation", "workflow"],
   "homepage": "https://github.com/mgj/loopkit",
   "license": "MIT",
+  "contributors": [
+    { "name": "it-xian", "url": "https://github.com/it-xian" }
+  ],
   "type": "module",
   "bin": {
     "loopkit": "./dist/cli.js"

@@ -1,0 +1,37 @@
+# Pull Request Review Loop
+# Automatically reviews PRs with Maker/Checker separation
+name: pr-review
+description: >
+  Automatically reviews pull requests for bugs, security issues,
+  and code quality. Uses separate agents for review and verification.
+
+trigger:
+  type: webhook
+  event: pull_request
+
+pipeline:
+  - parallel:
+      - prompt: "Review this PR for correctness bugs. Focus on logic errors, edge cases, and race conditions."
+        label: Bug Review
+      - prompt: "Review this PR for security vulnerabilities. Focus on injection, auth, and data exposure."
+        label: Security Review
+      - prompt: "Review this PR for code quality and maintainability."
+        label: Quality Review
+      - prompt: "Review this PR for performance issues."
+        label: Performance Review
+
+verify:
+  maker: [Bug Review, Security Review, Quality Review, Performance Review]
+  checker: "Adversarial Verifier"
+  maxRounds: 3
+  autoRetry: true
+
+budget:
+  maxTokens: 500000
+  maxDurationMinutes: 30
+
+memory:
+  store: filesystem
+  path: .loopkit/state
+
+tags: [code-review, pr, automation]

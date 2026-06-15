@@ -1,0 +1,35 @@
+# Daily Issue Triage Loop
+# Scans and categorizes new issues daily
+name: daily-triage
+description: Automatically categorizes and prioritizes new GitHub issues.
+
+trigger:
+  type: cron
+  cron: "0 9 * * 1-5"
+
+pipeline:
+  - prompt: >
+      Scan all open issues without labels.
+      For each issue:
+      1. Categorize it (bug/feature/question/docs)
+      2. Assess priority (critical/high/medium/low)
+      3. Suggest appropriate labels
+      4. Assign to the most relevant team member
+    label: Issue Triage
+
+verify:
+  maker: Issue Triage
+  checker: Triage Verifier
+  maxRounds: 2
+  autoRetry: true
+
+budget:
+  maxTokens: 200000
+  maxDurationMinutes: 15
+  maxIterations: 1
+
+memory:
+  store: filesystem
+  path: .loopkit/state
+
+tags: [issues, triage, automation]

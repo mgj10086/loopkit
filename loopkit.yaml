@@ -1,0 +1,15 @@
+# LoopKit Project Configuration
+# See https://github.com/mgj/loopkit for documentation
+version: "1"
+
+settings:
+  defaultBudget:
+    maxTokens: 500000
+    maxDurationMinutes: 30
+    maxIterations: 10
+  defaultMemory:
+    store: filesystem
+    path: .loopkit/state
+  enforceMakerChecker: true
+
+loops: {}

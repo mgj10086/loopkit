@@ -1,0 +1,42 @@
+{
+  "name": "loopkit",
+  "version": "0.1.0",
+  "description": "The open-source standard for autonomous AI agent loops. Compose. Verify. Deploy.",
+  "keywords": ["loop-engineering", "agent", "ai-agent", "automation", "workflow"],
+  "homepage": "https://github.com/mgj/loopkit",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "loopkit": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "loops",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "commander": "^12.0.0",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.23.0",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "tsx": "^4.16.0",
+    "@types/node": "^20.14.0",
+    "@types/js-yaml": "^4.0.9",
+    "vitest": "^1.6.0",
+    "eslint": "^9.0.0"
+  }
+}

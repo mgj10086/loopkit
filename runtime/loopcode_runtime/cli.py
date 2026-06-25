@@ -1,5 +1,5 @@
 """
-LoopKit Runtime — CLI entry point (click).
+LoopCode Runtime — CLI entry point (click).
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ from .reporter import Reporter
               type=click.Choice(["anthropic", "openai", "custom"]))
 @click.pass_context
 def cli(ctx, project_dir, dry_run, model, provider):
-    """LoopKit Runtime — Run autonomous AI agent loops."""
+    """LoopCode Runtime — Run autonomous AI agent loops."""
     ctx.ensure_object(dict)
     reporter = Reporter()
     llm = LLMClient(provider=provider, model=model)
@@ -49,7 +49,7 @@ def validate(ctx):
         reporter.error(str(e))
         sys.exit(1)
 
-    reporter.section("LoopKit Validation")
+    reporter.section("LoopCode Validation")
 
     # List project-level loops
     for name, config in project.loops.items():
@@ -61,7 +61,7 @@ def validate(ctx):
         for f in sorted(loops_dir.glob("*.yaml")):
             reporter.info(f"  📄 {f.name}")
     elif not project.loops:
-        reporter.warning("No loops defined. Run 'loopkit init' or add loops manually.")
+        reporter.warning("No loops defined. Run 'loopcode init' or add loops manually.")
 
     reporter.success(f"Project {engine.project_dir} is valid")
     reporter.info("")
@@ -91,7 +91,7 @@ def demo(ctx):
     engine: LoopEngine = ctx.obj["engine"]
     reporter: Reporter = ctx.obj["reporter"]
 
-    reporter.section("LoopKit Demo - Built-in Loops")
+    reporter.section("LoopCode Demo - Built-in Loops")
 
     loops = [
         ("pr-review", "Multi-agent code review with Maker/Checker"),

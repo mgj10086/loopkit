@@ -1,5 +1,5 @@
 /**
- * loopkit status — Show current LoopKit project status
+ * loopcode status — Show current LoopCode project status
  *
  * Displays:
  *   - Project config health
@@ -17,7 +17,7 @@ export function statusCommand(targetDir: string = process.cwd()) {
   const validation = validateCommand(targetDir);
 
   // Check state directory
-  const stateDir = path.join(targetDir, '.loopkit', 'state');
+  const stateDir = path.join(targetDir, '.loopcode', 'state');
   const hasStateDir = fs.existsSync(stateDir);
 
   // Check for run history
@@ -32,7 +32,7 @@ export function statusCommand(targetDir: string = process.cwd()) {
     } catch { /* ignore */ }
   }
 
-  logger.section('LoopKit Status');
+  logger.section('LoopCode Status');
 
   if (validation.valid) {
     logger.kv('Configuration', '✅ Valid');
@@ -74,8 +74,8 @@ export function statusCommand(targetDir: string = process.cwd()) {
   // Next steps if not initialized
   if (!validation.projectFile) {
     logger.info('');
-    logger.info('This directory is not a LoopKit project.');
-    logger.info('Run "loopkit init" to get started.');
+    logger.info('This directory is not a LoopCode project.');
+    logger.info('Run "loopcode init" to get started.');
     logger.info('');
   }
 }

@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 /**
- * LoopKit CLI — The open-source standard for autonomous AI agent loops.
+ * LoopCode CLI — The open-source standard for autonomous AI agent loops.
  *
  * Usage:
- *   loopkit init                  Initialize a new LoopKit project
- *   loopkit validate              Validate loop configuration
- *   loopkit run <loop-name>       Execute a loop
- *   loopkit status                Show project status
- *   loopkit --help                Show help
- *   loopkit --version             Show version
+ *   loopcode init                  Initialize a new LoopCode project
+ *   loopcode validate              Validate loop configuration
+ *   loopcode run <loop-name>       Execute a loop
+ *   loopcode status                Show project status
+ *   loopcode --help                Show help
+ *   loopcode --version             Show version
  */
 
 import { Command } from 'commander';
@@ -26,13 +26,13 @@ const pkg = require('../package.json');
 const program = new Command();
 
 program
-  .name('loopkit')
+  .name('loopcode')
   .description('The open-source standard for autonomous AI agent loops')
   .version(pkg.version);
 
 program
   .command('init')
-  .description('Initialize a new LoopKit project in the current directory')
+  .description('Initialize a new LoopCode project in the current directory')
   .option('-f, --force', 'Overwrite existing files')
   .action(async (options) => {
     await initCommand(process.cwd(), options);

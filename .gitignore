@@ -2,7 +2,7 @@ node_modules/
 dist/
 *.tsbuildinfo
 .env
-.loopkit/state/
+.loopcode/state/
 __pycache__/
 *.pyc
 *.egg-info/

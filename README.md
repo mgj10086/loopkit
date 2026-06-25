@@ -1,4 +1,4 @@
-# LoopKit 🔄
+# LoopCode 🔄
 
 > **The Open-Source Standard for Autonomous AI Agent Loops**
 > Compose. Verify. Deploy.
@@ -9,14 +9,14 @@
 
 ---
 
-## Why LoopKit?
+## Why LoopCode?
 
 Every team building AI agents is reinventing the same wheel — designing loops,
 wiring up Maker/Checker verification, managing state across sessions, handling
 failure recovery. **There is no standard.**
 
-LoopKit is that standard. Inspired by what React did for UI components and what
-Docker did for containers, LoopKit gives you:
+LoopCode is that standard. Inspired by what React did for UI components and what
+Docker did for containers, LoopCode gives you:
 
 - **Six composable primitives** — Trigger, Pipeline, Skill, Connector, SubAgent, Memory
 - **Built-in Maker/Checker** — Verification is in the architecture, not an afterthought
@@ -25,7 +25,7 @@ Docker did for containers, LoopKit gives you:
 
 ## Demo
 
-![LoopKit Demo](docs/demo.svg)
+![LoopCode Demo](docs/demo.svg)
 
 Try it yourself:
 
@@ -34,7 +34,7 @@ Try it yourself:
 cd runtime && pip install -e .
 
 # Run a code review loop (dry run — no LLM cost)
-loopkit-runtime --dry-run run pr-review
+loopcode-runtime --dry-run run pr-review
 ```
 
 ```
@@ -69,16 +69,16 @@ Verification: Maker=['Bug Review', 'Security Review',
 
 ```bash
 # 1. Install
-npm install -g loopkit
+npm install -g loopcode
 
 # 2. Initialize a project
-loopkit init
+loopcode init
 
 # 3. Validate
-loopkit validate
+loopcode validate
 
 # 4. Run a loop (requires ANTHROPIC_API_KEY or OPENAI_API_KEY)
-loopkit-runtime run pr-review
+loopcode-runtime run pr-review
 ```
 
 ## Example: PR Review Loop
@@ -111,14 +111,14 @@ budget:
 
 memory:
   store: filesystem
-  path: .loopkit/state
+  path: .loopcode/state
 ```
 
 ## Architecture
 
 ```
 ┌── User ──────────────────────────────────┐
-│  loopkit.yaml        loops/              │  ← Declarative YAML
+│  loopcode.yaml        loops/              │  ← Declarative YAML
 └────────┬──────────────────────┬───────────┘
          │                      │
     ┌────▼──────────────┐ ┌────▼──────────┐
@@ -145,7 +145,7 @@ memory:
                                │
                     ┌──────────▼──────────┐
                     │    State Store      │  ← Filesystem persistence
-                    │  .loopkit/state/    │
+                    │  .loopcode/state/    │
                     └─────────────────────┘
 ```
 
@@ -165,7 +165,7 @@ memory:
 Each loop receives a 0-100 score across 7 dimensions:
 
 ```
-loopkit validate
+loopcode validate
   
   pr-review    — LRS: 85/100 (Grade B)
     [ok] Maker/Checker separation enforced

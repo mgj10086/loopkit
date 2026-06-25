@@ -29,13 +29,13 @@
     <circle cx="55" cy="40" r="6" fill="#f7768e"/>
     <circle cx="75" cy="40" r="6" fill="#e0af68"/>
     <circle cx="95" cy="40" r="6" fill="#9ece6a"/>
-    <text x="410" y="44" fill="#3b4261" font-size="12" font-weight="500" text-anchor="middle">loopkit-demo</text>
+    <text x="410" y="44" fill="#3b4261" font-size="12" font-weight="500" text-anchor="middle">loopcode-demo</text>
   </g>
 
   <g font-size="12">
-    <g class="ln"><text x="50" y="88" class="c1" font-weight="600" font-size="13">$</text><text x="66" y="88" class="c2" font-size="13">loopkit-runtime --dry-run demo</text></g>
+    <g class="ln"><text x="50" y="88" class="c1" font-weight="600" font-size="13">$</text><text x="66" y="88" class="c2" font-size="13">loopcode-runtime --dry-run demo</text></g>
     <g class="ln"><text x="50" y="110" class="c3">============================================================</text></g>
-    <g class="ln"><text x="180" y="132" class="c4" font-size="14">LoopKit Demo — Built-in Loops</text></g>
+    <g class="ln"><text x="180" y="132" class="c4" font-size="14">LoopCode Demo — Built-in Loops</text></g>
     <g class="ln"><text x="50" y="152" class="c3">============================================================</text></g>
     <g class="ln"><text x="50" y="178" class="c5" font-size="13">── Demo: pr-review</text><text x="230" y="178" class="c3" font-size="13">────────────────────────────────────────</text></g>
     <g class="ln"><text x="70" y="202" class="c5">Description:</text><text x="170" y="202" class="c2">Multi-agent code review with Maker/Checker</text></g>

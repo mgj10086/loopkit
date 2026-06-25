@@ -1,5 +1,5 @@
 """
-LoopKit Runtime — Core loop execution engine.
+LoopCode Runtime — Core loop execution engine.
 
 Orchestrates the full loop lifecycle:
   1. Load config → 2. Spawn maker agents → 3. Run checker verification
@@ -42,20 +42,20 @@ class LoopEngine:
         self.llm = llm_client or LLMClient(provider="anthropic")
         self.reporter = reporter or Reporter()
         self.dry_run = dry_run
-        self._state_dir = self.project_dir / ".loopkit" / "state"
+        self._state_dir = self.project_dir / ".loopcode" / "state"
 
     # ── Public API ──────────────────────────────────────────
 
     def load_project(self) -> ProjectConfig:
-        """Load loopkit.yaml from project directory."""
-        for name in ["loopkit.yaml", "loopkit.yml"]:
+        """Load loopcode.yaml from project directory."""
+        for name in ["loopcode.yaml", "loopcode.yml"]:
             path = self.project_dir / name
             if path.exists():
                 with open(path) as f:
                     raw = yaml.safe_load(f)
                 return ProjectConfig.model_validate(raw)
         raise FileNotFoundError(
-            "No loopkit.yaml found. Run 'loopkit init' first."
+            "No loopcode.yaml found. Run 'loopcode init' first."
         )
 
     def find_loop(self, loop_name: str) -> tuple[LoopConfig, str]:

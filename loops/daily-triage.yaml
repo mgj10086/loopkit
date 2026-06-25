@@ -30,6 +30,6 @@ budget:
 
 memory:
   store: filesystem
-  path: .loopkit/state
+  path: .loopcode/state
 
 tags: [issues, triage, automation]

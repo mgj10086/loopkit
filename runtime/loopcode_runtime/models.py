@@ -1,5 +1,5 @@
 """
-LoopKit Runtime — Pydantic models for loop configuration and execution state.
+LoopCode Runtime — Pydantic models for loop configuration and execution state.
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ class BudgetConfig(BaseModel):
 
 class MemoryConfig(BaseModel):
     store: Literal["filesystem", "memory", "claude"] = "filesystem"
-    path: str = ".loopkit/state"
+    path: str = ".loopcode/state"
     persistence: Literal["full", "summary", "minimal"] = "full"
 
 

@@ -1,5 +1,5 @@
 """
-LoopKit Runtime — LLM integration layer.
+LoopCode Runtime — LLM integration layer.
 
 Calls LLM APIs (Claude, OpenAI, or custom) to execute agent prompts.
 Supports streaming, structured output, and token tracking.

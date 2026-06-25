@@ -1,6 +1,6 @@
-# CLAUDE.md — LoopKit
+# CLAUDE.md — LoopCode
 
-LoopKit is the open-source standard for autonomous AI agent loops.
+LoopCode is the open-source standard for autonomous AI agent loops.
 
 ## Project Overview
 
@@ -25,10 +25,10 @@ npm run dev -- status            # Show status
 src/
 ├── cli.ts                       # CLI entry point (Commander)
 ├── commands/
-│   ├── init.ts                  # loopkit init
-│   ├── validate.ts              # loopkit validate (inc. LRS)
-│   ├── run.ts                   # loopkit run <name>
-│   └── status.ts                # loopkit status
+│   ├── init.ts                  # loopcode init
+│   ├── validate.ts              # loopcode validate (inc. LRS)
+│   ├── run.ts                   # loopcode run <name>
+│   └── status.ts                # loopcode status
 ├── schema/
 │   └── types.ts                 # Zod schemas for all config types
 ├── engine/                      # (W2+) Runtime engine
@@ -68,5 +68,5 @@ yet make actual LLM calls — those will be delegated to MCP/Agent tools in W2.
 
 ## Links
 
-- [GitHub](https://github.com/mgj/loopkit)
-- [Docs](https://github.com/mgj/loopkit#readme)
+- [GitHub](https://github.com/mgj/loopcode)
+- [Docs](https://github.com/mgj/loopcode#readme)

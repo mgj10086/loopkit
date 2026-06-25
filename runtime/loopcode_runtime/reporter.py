@@ -1,5 +1,5 @@
 """
-LoopKit Runtime — Rich console reporter with structured output.
+LoopCode Runtime — Rich console reporter with structured output.
 """
 
 from __future__ import annotations

@@ -1,5 +1,5 @@
-# LoopKit Project Configuration
-# See https://github.com/mgj/loopkit for documentation
+# LoopCode Project Configuration
+# See https://github.com/mgj/loopcode for documentation
 version: "1"
 
 settings:
@@ -9,7 +9,7 @@ settings:
     maxIterations: 10
   defaultMemory:
     store: filesystem
-    path: .loopkit/state
+    path: .loopcode/state
   enforceMakerChecker: true
 
 loops: {}

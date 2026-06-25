@@ -1,5 +1,5 @@
 /**
- * LoopKit — Loop Readiness Score (LRS)
+ * LoopCode — Loop Readiness Score (LRS)
  *
  * Evaluates a Loop configuration's production readiness on 7 dimensions.
  * Each dimension scored 0-100, with specific criteria and weights.

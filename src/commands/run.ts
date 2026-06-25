@@ -1,5 +1,5 @@
 /**
- * loopkit run — Execute a Loop
+ * loopcode run — Execute a Loop
  *
  * Runs a named loop from the configuration:
  *   1. Validates the config
@@ -46,7 +46,7 @@ export async function runCommand(loopName: string, targetDir: string = process.c
   // 1. Load config
   const projectFile = findProjectFile(targetDir);
   if (!projectFile) {
-    logger.error('No loopkit.yaml found. Run "loopkit init" first.');
+    logger.error('No loopcode.yaml found. Run "loopcode init" first.');
     result.success = false;
     return result;
   }
@@ -156,7 +156,7 @@ export async function runCommand(loopName: string, targetDir: string = process.c
 }
 
 function findProjectFile(dir: string): string | null {
-  const candidates = ['loopkit.yaml', 'loopkit.yml'];
+  const candidates = ['loopcode.yaml', 'loopcode.yml'];
   for (const name of candidates) {
     const p = path.join(dir, name);
     if (fs.existsSync(p)) return p;

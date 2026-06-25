@@ -1,7 +1,7 @@
 /**
- * loopkit validate — Validate LoopKit configuration
+ * loopcode validate — Validate LoopCode configuration
  *
- * Parses loopkit.yaml and all loop files, checks schema compliance,
+ * Parses loopcode.yaml and all loop files, checks schema compliance,
  * calculates Loop Readiness Score for each loop.
  */
 
@@ -36,7 +36,7 @@ export function validateCommand(targetDir: string = process.cwd()): ValidationRe
   const projectFile = findProjectFile(targetDir);
   if (!projectFile) {
     result.valid = false;
-    result.errors.push('No loopkit.yaml or loopkit.yml found in this directory or parents.');
+    result.errors.push('No loopcode.yaml or loopcode.yml found in this directory or parents.');
     return result;
   }
   result.projectFile = projectFile;
@@ -146,7 +146,7 @@ function printSummary(result: ValidationResult) {
 }
 
 function findProjectFile(dir: string): string | null {
-  const candidates = ['loopkit.yaml', 'loopkit.yml'];
+  const candidates = ['loopcode.yaml', 'loopcode.yml'];
   for (const name of candidates) {
     const p = path.join(dir, name);
     if (fs.existsSync(p)) return p;

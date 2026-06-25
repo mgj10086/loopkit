@@ -29,7 +29,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install -e runtime/
-      - run: loopkit-runtime --dry-run demo
+      - run: loopcode-runtime --dry-run demo
 
   test:
     name: Tests

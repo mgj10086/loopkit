@@ -1,16 +1,16 @@
 {
-  "name": "loopkit",
+  "name": "loopcode",
   "version": "0.1.0",
   "description": "The open-source standard for autonomous AI agent loops. Compose. Verify. Deploy.",
   "keywords": ["loop-engineering", "agent", "ai-agent", "automation", "workflow"],
-  "homepage": "https://github.com/mgj/loopkit",
+  "homepage": "https://github.com/mgj/loopcode",
   "license": "MIT",
   "contributors": [
     { "name": "it-xian", "url": "https://github.com/it-xian" }
   ],
   "type": "module",
   "bin": {
-    "loopkit": "./dist/cli.js"
+    "loopcode": "./dist/cli.js"
   },
   "files": [
     "dist",

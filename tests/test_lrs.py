@@ -28,7 +28,7 @@ def make_config(**overrides):
             "maxDurationMinutes": 30,
             "maxIterations": 10,
         },
-        "memory": {"store": "filesystem", "path": ".loopkit/state"},
+        "memory": {"store": "filesystem", "path": ".loopcode/state"},
     }
     base.update(overrides)
     return LoopConfig.parse(base)

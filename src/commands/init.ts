@@ -1,15 +1,15 @@
 /**
- * loopkit init — Initialize a new LoopKit project
+ * loopcode init — Initialize a new LoopCode project
  *
- * Scaffolds the project structure with loopkit.yaml and default loop templates.
+ * Scaffolds the project structure with loopcode.yaml and default loop templates.
  */
 
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import { logger } from '../utils/logger.js';
 
-const DEFAULT_PROJECT_YAML = `# LoopKit Project Configuration
-# See https://github.com/mgj/loopkit for documentation
+const DEFAULT_PROJECT_YAML = `# LoopCode Project Configuration
+# See https://github.com/mgj/loopcode for documentation
 version: "1"
 
 settings:
@@ -19,7 +19,7 @@ settings:
     maxIterations: 10
   defaultMemory:
     store: filesystem
-    path: .loopkit/state
+    path: .loopcode/state
   enforceMakerChecker: true
 
 loops: {}
@@ -59,7 +59,7 @@ budget:
 
 memory:
   store: filesystem
-  path: .loopkit/state
+  path: .loopcode/state
 
 tags: [code-review, pr, automation]
 `;
@@ -96,18 +96,18 @@ budget:
 
 memory:
   store: filesystem
-  path: .loopkit/state
+  path: .loopcode/state
 
 tags: [issues, triage, automation]
 `;
 
 export async function initCommand(targetDir: string = process.cwd(), options: { force?: boolean } = {}) {
-  const projectFile = path.join(targetDir, 'loopkit.yaml');
+  const projectFile = path.join(targetDir, 'loopcode.yaml');
   const loopsDir = path.join(targetDir, 'loops');
 
   // Check if already initialized
   if (fs.existsSync(projectFile) && !options.force) {
-    logger.warn('LoopKit already initialized in this directory.');
+    logger.warn('LoopCode already initialized in this directory.');
     logger.info(`  File: ${projectFile}`);
     logger.info('  Use --force to overwrite.');
     return;
@@ -136,21 +136,21 @@ export async function initCommand(targetDir: string = process.cwd(), options: { 
   }
 
   // Create state directory
-  const stateDir = path.join(targetDir, '.loopkit', 'state');
+  const stateDir = path.join(targetDir, '.loopcode', 'state');
   if (!fs.existsSync(stateDir)) {
     fs.mkdirSync(stateDir, { recursive: true });
   }
 
-  logger.section('LoopKit Ready');
-  logger.kv('Config', 'loopkit.yaml');
+  logger.section('LoopCode Ready');
+  logger.kv('Config', 'loopcode.yaml');
   logger.kv('Loops', `${loopsDir}/ (2 templates)`);
-  logger.kv('State', '.loopkit/state/');
+  logger.kv('State', '.loopcode/state/');
   logger.sectionEnd();
 
   logger.info('');
   logger.info('Next steps:');
-  logger.info('  1. Edit loopkit.yaml to configure your loops');
-  logger.info('  2. Run "loopkit validate" to check your config');
-  logger.info('  3. Run "loopkit run pr-review" to test a loop');
+  logger.info('  1. Edit loopcode.yaml to configure your loops');
+  logger.info('  2. Run "loopcode validate" to check your config');
+  logger.info('  3. Run "loopcode run pr-review" to test a loop');
   logger.info('');
 }

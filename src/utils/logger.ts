@@ -1,5 +1,5 @@
 /**
- * LoopKit — Simple logger utility
+ * LoopCode — Simple logger utility
  */
 
 export enum LogLevel {

@@ -1,5 +1,5 @@
 /**
- * LoopKit — Core Type Definitions
+ * LoopCode — Core Type Definitions
  *
  * The six composable primitives of Loop Engineering:
  *   Trigger | Pipeline | Skill | Connector | SubAgent | Memory
@@ -96,7 +96,7 @@ export const MemoryConfig = z.object({
   /** Where to persist state */
   store: MemoryStore.default('filesystem'),
   /** Path relative to project root */
-  path: z.string().default('.loopkit/state'),
+  path: z.string().default('.loopcode/state'),
   /** Whether to persist full context or just summaries */
   persistence: z.enum(['full', 'summary', 'minimal']).default('full'),
 });
@@ -124,7 +124,7 @@ export const LoopConfig = z.object({
 });
 export type LoopConfig = z.infer<typeof LoopConfig>;
 
-// ── Project Config (loopkit.yaml) ────────────────────────────
+// ── Project Config (loopcode.yaml) ────────────────────────────
 
 export const ProjectConfig = z.object({
   /** Schema version */
